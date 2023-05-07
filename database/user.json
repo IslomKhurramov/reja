@@ -1,0 +1,17 @@
+{
+  "name": "Islom",
+  "profession": "Software Engineer",
+  "age": 25,
+  "residence": "S.Korea",
+  "adress": "S.Korea, Incheon",
+  "languages": ["Uzbek", "Russian", "English", "Korean"],
+  "skills": ["HTML", "Css", "Js", "NodeJS"],
+  "extra-skills": ["Bootstrap", "Materialize", "Git Knowledge"],
+  "work_place": "IT company",
+  "about_me": "kjnckjnsdckjnjdcnljsncjlndsncljdncldnlcnsdlcnlsdnclsncldmdckdmlcs",
+  "city": "Karshi",
+  "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
+  "flower_desc": ["What is a Flower?", "What is Seedlings", "Who is Gardner"],
+  "famour_words": ["World is Yours"],
+  "famous_name": ["Islom Khurramov"]
+}
