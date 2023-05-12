@@ -31,6 +31,9 @@ shop.sotish(3);
 shop.qoldiq();
 shop.qabul(4);
 shop.qoldiq();
+
+//
+
 // console.log(" Jack Ma maslahatlari");
 // const list = [
 //   "yahshi talaba boling", //0-20
