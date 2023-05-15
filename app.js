@@ -1,3 +1,4 @@
+const e = require("express");
 const express = require("express");
 const app = express();
 const fs = require("fs");
@@ -27,9 +28,18 @@ app.set("view engine", "ejs");
 
 //4-Routing Code:bosqich routerlarga muljallangan
 app.post("/create-item", (req, res) => {
+  console.log("user entered /create-item");
   //post malumotni uzi bn birga olib keladi va databasega yozadi
   console.log(req.body);
-  res.json({ test: "success" });
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+    } else {
+      res.end("successfully added");
+    }
+  });
 });
 
 app.get("/author", (req, res) => {
@@ -38,7 +48,17 @@ app.get("/author", (req, res) => {
 
 app.get("/", function (req, res) {
   //get databasedan malumotni olish un ishlatiladi
-  res.render("reja");
+  console.log("user entered /");
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.send("somenthing went wrong");
+      } else {
+        res.render("reja", { items: data });
+      }
+    });
 });
 
 module.exports = app;
