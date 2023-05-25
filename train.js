@@ -1,36 +1,44 @@
-//TASK-D
-const moment = require("moment");
-const time = moment().format("HH:mm");
+//  Task-E: shunday function tuzing unga faqat bitta musbat integer argument qilib berilsin, va u ushbu argumentni tub son bolsa true aksincha false return qilsin.
 
-class Shop {
-  constructor(non, cola, lagmon) {
-    this.non = non;
-    this.cola = cola;
-    this.lagmon = lagmon;
-  }
-
-  qoldiq() {
-    console.log(
-      `Hozirda ${time}da ${this.non}ta non,${this.cola}ta cola va ${this.lagmon}ta lagmon mavjud!`
-    );
-  }
-
-  sotish(a) {
-    this.non = this.non - a;
-    return console.log(`${a}ta non sotildi!`);
-  }
-  qabul(b) {
-    this.cola = this.cola + b;
-    return console.log(`${b}ta cola qabul qilindi!`);
-  }
+function tubSonmi(a) {
+  if (a % 2 === 0) return false;
+  return true;
 }
-const shop = new Shop(4, 2, 5);
+console.log(tubSonmi(123));
 
-shop.qoldiq();
-shop.sotish(3);
-shop.qoldiq();
-shop.qabul(4);
-shop.qoldiq();
+//TASK-D
+// const moment = require("moment");
+// const time = moment().format("HH:mm");
+
+// class Shop {
+//   constructor(non, cola, lagmon) {
+//     this.non = non;
+//     this.cola = cola;
+//     this.lagmon = lagmon;
+//   }
+
+//   qoldiq() {
+//     console.log(
+//       `Hozirda ${time}da ${this.non}ta non,${this.cola}ta cola va ${this.lagmon}ta lagmon mavjud!`
+//     );
+//   }
+
+//   sotish(a) {
+//     this.non = this.non - a;
+//     return console.log(`${a}ta non sotildi!`);
+//   }
+//   qabul(b) {
+//     this.cola = this.cola + b;
+//     return console.log(`${b}ta cola qabul qilindi!`);
+//   }
+// }
+// const shop = new Shop(4, 2, 5);
+
+// shop.qoldiq();
+// shop.sotish(3);
+// shop.qoldiq();
+// shop.qabul(4);
+// shop.qoldiq();
 
 //
 
